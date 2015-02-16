@@ -29,7 +29,7 @@ int main(void)
 	
 	while(1)
 	{
-		_delay_ms(1);
+		
 		// Get sesnor status and show it using LED
 		if (PIND & _BV(PIND7))
 		{
@@ -54,6 +54,7 @@ int main(void)
 			if(usart_rx_bufor[usart_rx_bufor_ind-1] == crc(usart_rx_bufor, usart_rx_bufor_ind - 1)	// check CRC
 			&& usart_rx_bufor[MSG_ADDRESS] == MY_ADDRESS)											// check Address
 			{
+				//_delay_ms(10);
 				//char msg[] = {1, 2, 2, 'O', 'K', 0};
 				usart_rx_bufor[0] = MASTER_ADDRESS;
 				

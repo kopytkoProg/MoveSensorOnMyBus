@@ -229,7 +229,7 @@ ISR (TIMER0_COMPA_vect)														// Failed transmission
 	recive_counter = 0;														// Clear All buffers
 	usart_rx_bufor_ind = 0;													// Clear All buffers
 	state = RECEIVING_MSG;
-	//PORTB ^= (_BV(PB1));
+	//PORTB ^= (_BV(PB0));
 
 }
 //--------------------------------------------------------------
