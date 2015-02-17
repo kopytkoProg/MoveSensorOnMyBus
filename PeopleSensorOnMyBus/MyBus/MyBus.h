@@ -56,6 +56,7 @@ volatile unsigned int usart_rx_bufor_ind;									//receive buffer index, contai
 char volatile usart_rx_bufor[RX_BUFFER_SIZE];								//receive buffer
 
 
+extern void on_message_com (void);
 void send_data (volatile char *s, uint8_t length);
 void init_my_buss(void);
 uint8_t crc (volatile char *s, uint8_t length);

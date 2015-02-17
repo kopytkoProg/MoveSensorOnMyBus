@@ -185,9 +185,10 @@ ISR(USART_RX_vect)
 				usart_rx_bufor_ind = recive_counter;
 				state = HANDLING_MSG;
 				recive_counter = 0;
+				on_message_com();													// now when reedy call on_message_com
 			}
 
-		}
+		} 
 		else																		// To many received data, it is error
 		{
 			disable_timer0();														// Clear all data
